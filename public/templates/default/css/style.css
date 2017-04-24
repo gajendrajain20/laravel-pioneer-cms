@@ -1,0 +1,842 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 Sep, 2016, 12:35:15 AM
+    Author     : admin
+*/
+body{
+    font-family: 'Exo', sans-serif;
+    color: #222;
+    font-size: 16px;
+    line-height: 26px;
+}
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+    color: #111111;
+}
+img{
+    max-width: 100%;
+}
+a:hover{
+    color: #d61921;
+}
+
+a{
+	text-decoration:none !important;
+}
+.container{
+    max-width:1080px;
+}
+.topHeader{
+    background-color: #2f2f2f;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: #fff;
+    font-size: 11px;
+}
+.topMenu{
+    background-color: #D61921;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+    font-size: 11px;
+}
+.topHeader .top_date{
+    float: left;
+    margin-right: 15px;
+}
+.topHeader .top_hotline{
+    float: left;
+    margin-right: 10px;
+}
+.float_right{
+    text-align:  right;
+    float:right;
+}
+.td-social-icon-wrap{
+    width: 25px;
+    text-align: center;
+    display: inline-block;
+}
+.topHeader i{
+    color:#fff;
+}
+.footer{
+    background-color: #222222;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.copyright{
+    background-color: #0D0D0D;
+}
+.copyright{
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.copyright .center{
+    text-align: center;
+}
+.footer i{
+    font-size: 25px;
+    color: #fff;
+}
+.footer .float_right{
+    padding-top: 30px;
+}
+.footer .td-social-icon-wrap{
+    width: 50px;
+}
+.container_padding{
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+.top_breaking_news_content{
+    background-color: #fff;
+    display: block;
+    margin: -75px auto 0;
+    position: relative;
+    width: 90%;
+    z-index: 100;
+    padding: 15px;
+}
+.top_breaking_news_image{
+    position: relative;
+    z-index: 1;
+}
+.top_breaking_news_image img{
+    width: 100%;
+}
+.entry-title{
+    bottom: -2px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 38px;
+    margin-bottom: 10px;
+    position: relative;
+    margin-top: 0px;
+}
+.publish_date{
+    color:#aaa;
+    font-size: 11px;
+}
+.top_breaking_news_title{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted #aaa;
+}
+.block-title{
+    border-bottom:2px solid #d61921;
+    display: block;
+    float: left;
+    width: 100%;
+}
+.block-title a{
+    background-color: #d61921;
+    padding: 10px;
+    color: #fff;
+    float: left;
+    font-weight: bold;
+}
+.block-title span{
+    background-color: #d61921;
+    padding: 10px;
+    color: #fff;
+    float: left;
+    font-weight: bold;
+}
+.breaking_news .entry-title{
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom:5px;
+}
+.breaking_news{
+    display: block;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.donotmiss_title{
+    background-image: url("../images/sf.png") !important;
+    color: #fff;
+    font-size: 18px;
+    height: 39px;
+    padding-bottom: 10px;
+    padding-left: 10px !important;
+    padding-top: 10px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.do_not_miss_posts{
+    padding: 15px;
+    background-color: #f4f4f4;
+    float: left;
+    
+}
+.do_not_miss_posts_content{
+    float:left;
+    margin-bottom: 20px;
+}
+.do_not_miss_posts h3{
+    font-size: 21px;
+    line-height: 25px;
+    margin-top: 20px;
+}
+.balumgala_posts .entry-title{
+    font-size: 18px;
+    line-height: 21px;
+}
+.unlimited_posts h3{
+    font-size: 21px;
+    line-height: 25px;
+    margin-top: 20px;
+}
+.unlimited_posts .entry-title{
+    font-size: 18px;
+}
+.black_title span{
+    background-color: #000;
+    float: left;
+    padding: 10px;
+}
+.black_title{
+    border-color: #000;
+    color: #fff;
+    font-weight: bold;
+}
+.red_title span{
+    background-color: #d61921;
+    float: left;
+    padding: 10px;
+}
+.red_title{
+    border-color: #d61921;
+    color: #fff;
+    font-weight: bold;
+}
+.balumgala_title{
+    border: none;
+    overflow: hidden;
+}
+.balumgala_title img{
+    max-width: none;
+}
+.news_gallery_title{
+    color: #fff;
+    background-color: #d61921;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.news_gallery_posts{
+    background-color: #f4f4f4;
+    float: left;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+}
+.news_gallery_posts img{
+    margin-bottom: 10px;
+}
+.news_gallery_posts .entry-title{
+    font-size:21px;
+    line-height: 25px;
+}
+.td-post-header header .entry-title {
+    font-size: 41px;
+    line-height: 50px;
+    margin-bottom: 7px;
+    margin-top: 0;
+    word-wrap: break-word;
+}
+header .td-module-meta-info {
+    margin-bottom: 16px;
+}
+.td-module-meta-info {
+    font-family: "Open Sans",arial,sans-serif;
+    font-size: 11px;
+    line-height: 1;
+    margin-bottom: 7px;
+    min-height: 17px;
+}
+.td-post-date {
+    color: #444;
+    float: left;
+    margin-top:10px;
+	margin-left: 4px;
+}
+header .td-post-views {
+    float: right;
+    margin-right: 22px;
+    margin-right: 0;
+}
+header .td-post-comments {
+    float: right;
+    position: relative;
+    top: 2px;
+    margin-left: 22px;
+}
+.td-post-content {
+    margin-top: 21px;
+    padding-bottom: 16px;
+    font-size: 19px;
+    width:100%;
+    display:block;
+    float:left;
+}
+.td_module_mx1 {
+    margin-bottom: 3px;
+    padding-bottom: 0;
+    position: relative;
+    margin-top:10px;
+    float:left;
+}
+.td_module_mx1 .td-module-thumb {
+    height: auto;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+}
+.td_module_mx1 .td-module-meta-info {
+    bottom: 0;
+    margin-bottom: 17px;
+    padding: 0 17px;
+    position: absolute;
+    z-index: 1;
+}
+.td_module_mx1 h3{
+    font-size:17px;
+    line-height:20px;
+    color:#fff;
+}
+.td_module_mx1 h3 a{
+    color:#fff;
+}
+.td_module_mx1 .publish_date{
+    color:#fff;
+}
+#navbar{
+    float: right;
+    margin-top: 12px;
+}
+.logo{
+    float:left;
+}
+#navbar a{
+    font-family: Exo;
+    font-weight: bold;
+    line-height: 78px;    
+    color: #f4f4f4;
+    font-size: 14px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    background: none;
+}
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover{
+    background: none;
+}
+#navbar li a.active::after,#navbar li a:hover::after,#navbar li a:focus::after {
+    background-color: #dd5252;
+    bottom: 0;
+    content: "";
+    height: 4px;
+    left: 0;
+    position: absolute;
+    transform: translate3d(0px, 0px, 0px);
+    width: 100%;
+}
+#navbar ul ul li a{
+    line-height: 20px;   
+    color: #000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.td-post-sharing-bottom{
+    border: 1px solid #ededed;
+    margin-bottom: 40px;
+    padding: 10px 26px;
+    width:100%;
+    display:block;
+    float:left;
+}
+.td-post-share-title {
+  font-weight: 700;
+  font-size: 14px;
+  position: relative;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.td-default-sharing {
+  display: inline-block;
+  vertical-align: middle;
+}
+.td-post-sharing-bottom .td-social-sharing-buttons {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  height: 32px;
+  min-width: 32px;
+  padding: 6px 9px 4px 9px;
+  float: left;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+}
+.td-post-sharing-bottom .td-social-sharing-buttons {
+    padding: 7px 9px 4px;
+}
+.td-social-facebook {
+  background-color: #516eab;
+}
+.td-social-facebook .td-icon-facebook {
+  font-size: 14px;
+  position: relative;
+  top: 1px;
+}
+.td-social-facebook .td-social-but-text {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  line-height: 19px;
+  margin-left: 5px;
+  padding-left: 5px;
+  float:left;
+}
+.td-social-twitter {
+  background-color: #29c5f6;
+}
+.td-social-twitter .td-icon-twitter {
+  font-size: 12px;
+}
+.td-social-twitter .td-social-but-text {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  line-height: 19px;
+  margin-left: 5px;
+  padding-left: 5px;
+  float:left;
+}
+.td-social-google {
+  background-color: #eb4026;
+  width: 40px;
+}
+.td-social-google .td-icon-googleplus {
+  font-size: 16px;
+  position: relative;
+  top: 0;
+  left: -1px;
+  line-height: 22px;
+}
+.td-social-pinterest {
+  background-color: #ca212a;
+  margin-right: 0;
+  /* responsive portrait phone */
+}
+.td-default-sharing i{
+    float: left;
+    margin-top: 2px;
+    font-size: 15px;
+}
+.td-post-header{
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+    width:100%;
+}
+
+.frontend_logo_images{
+	height:65px;
+	width:120px;
+}
+.video_page .td-module-thumb{
+    height:220px;
+    position: relative;
+}
+.video_page.homevideo .td-module-thumb{
+    height:320px;
+    position: relative;
+}
+.video_page.homevideo2 .td-module-thumb{
+    height:154px;
+    position: relative;
+}
+.video_page .td-module-thumb img{
+    min-height: 100%;
+}
+.video_page .video_list{
+    padding-left: 0;
+    padding-right: 10px;
+}
+.video_page .video_list:nth-child(2n) {
+  padding-right: 0;
+}
+.video_page .td_module_mx1 .td-module-thumb a:last-child::before {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%) repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 80%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.video_page .td-video-play-ico > img {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    min-height: auto;
+}
+.box_body{
+    padding:10px 10px 10px 7px;
+    border-radius:0px;
+}
+
+.clearfix{
+	clear:both;
+}
+
+a.close{
+    text-decoration: none !important;
+    font-size: 18px !important;
+    line-height: 1.2;
+}
+
+.widget{
+	display:none;
+}
+
+.desktop{
+	display:none;
+}
+
+.mobile{
+	display:none;
+}
+
+/* Media queries for showing widgets*/
+
+@media (max-width: 768px) {
+   /* Class to show mobile widgets */
+  
+   .mobile{
+	   display: block;
+   }
+}
+
+@media (min-width: 769px) {
+   /* Class to hide mobile widgets & show desktop widgets */
+   .desktop{
+	   display:block;
+   }
+}
+
+
+/* style for menus */
+
+.dropdown-menu a:hover{
+	background-color: none;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: "";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+
+
+
+/* Loader styles */
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal_loader {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal_loader {
+    display: block;
+}
+
+
+
+/*  See All button Styles*/
+
+.see_all{
+	margin-top:12px;
+}
+.content_right{
+    padding-right: 0px;
+}
+.td-read-more a{
+    background-color: #d61921;
+   color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 10px 15px;
+    transition: background-color 0.4s ease 0s;
+}
+.td-read-more{
+    display: block;
+    margin-bottom: 15px;
+    float: right;
+}
+.td-post-views{
+    font-size:11px;
+    display: block;
+    line-height: 10px;
+    margin-bottom: 5px;
+}
+.video_block{
+    margin-bottom: 10px;
+}
+
+#IDCPostNav{
+    display:none !important;
+}
+.idc-signup{
+    display: block;
+    width:100% !important;
+    float:left !important;
+}
+.idc-columns,.idc-new_subscribe{
+    display:none !important;
+}
+#idc-container .idc-c-m .idc-column-wide, #idc-container .idc-c-m .idc-column{
+    width:100% !important;
+}
+.idc-column input{
+    padding: 10px !important;
+    width: 100% !important;
+}
+.idc-c-t-inner textarea{
+    padding: 10px !important;
+    width: 100% !important;
+    margin-bottom: 10px !important;
+}
+#IDNewThreadSubmitLI .idc-right{
+    float:left !important;     
+}
+#idc-container .idc-btn_l span, #idc-container .idc-btn_s span{
+    background: none !important;   
+}
+#idc-container .idc-right a{
+    background-color: #222222 !important;     
+    border: medium none !important;     
+    border-radius: 0 !important;     
+    color: #fff !important;     
+    font-family: "Roboto",sans-serif !important;     
+    font-size: 13px !important;     
+    font-weight: 500;
+    padding: 8px 15px !important;     
+    transition: background-color 0.4s ease 0s;
+}
+.idc-r{
+    color:#fff !important;
+}
+.idc-right{
+    display: none !important;
+}
+#IDCommentsNewThreadCover .idc-right{
+    display: block !important;
+}
+.video_page.rightvideo .td-module-thumb{
+    height:auto;
+}
+.getMayLike .maylikediv{
+    padding-left: 0px;
+}
+.getMayLike .maylikediv:last-child{
+    padding-right: 0px;
+}
+.getMayLike .entry-title{
+    display: block;
+    float: left;
+    font-size: 15px;
+    line-height: 20px;
+    width: 100%;
+}
+.getMayLike img{
+    height: 150px;
+    margin-bottom: 10px;
+    float:left;
+}
+
+@media (min-width: 768px) {
+	#main-nav {
+		line-height: 0;
+		text-align: right;
+	}
+	#main-menu {
+		display: inline-block;
+	}
+}
+
+
+.topMenu .navbar-toggle {
+    border-color: #AD0202;
+}
+
+.topMenu .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+
+#main-menu{
+	margin-top: 20px;
+    border-radius: 0px;
+    background-color: #D61921;
+}
+
+#main-menu>li>a{
+	color:#fff;
+}	
+
+#main-menu a{
+	cursor:pointer;
+}
+
+@media (max-width: 768px){
+	#main-menu li a{
+		color:#fff;
+	}
+}
+
+@media (min-width: 768px){
+	#main-menu>li>a span.sub-arrow{
+		border-color: #fff transparent transparent transparent;
+	}
+	.sm-clean a span.sub-arrow {
+		border-color: #000000 transparent transparent transparent;
+	}
+}
+
+.publish_date{
+	clear:both;
+}
+
+
+.td-post-views{
+	color: #000;
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 4px;
+}
+
+.white{
+	color:#fff;
+}
+
+.small{
+	font-size:9px;
+}
+
+.sm{
+	z-index:inherit;
+}
+
+.entry-title-small{
+	font-size: 18px;
+    font-weight: bold;
+	line-height:inherit;
+}
+
+.tags{
+	display:inline-block;
+	margin-right:8px;
+}
+
+.tag{
+	display:inline-block;
+	margin-right :4px;
+	padding: 1px 10px;	
+	border-radius:2px;
+}
+
+.tag a{
+	text-decoration:none;
+	color:#fff;
+}
+
+.site-name{
+	margin-left:20px;
+	font-size:32px;
+	vertical-align:middle;
+	color:#fff;
+}
+
+.site-name-anchor{
+	text-decoration: none !important;
+}

@@ -1,0 +1,347 @@
+.container{
+    width:100%;
+}
+
+.no_padding{
+    padding:0px;
+}
+
+._sidebar{
+    padding-top: 22px;
+}
+
+.no_border_radius{
+    border-radius:0px;
+}
+
+.box{
+    border: 1px solid #e5e5e5;
+    border-top:0px;
+    border-radius:0px;
+    margin-bottom:0px;
+}
+.box_padding{
+    padding: 6px 0px 5px 10px;
+}
+
+.box_body{
+    padding:10px 10px 10px 7px;
+    border-radius:0px;
+}
+
+.box_body2{
+    padding:10px 6px 10px 6px;
+    border-radius:0px;
+}
+
+#featuredImage_body input input[type=button]{
+    padding: 6px;
+    background-color: #6890FF;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid #2A75FF;
+}
+
+
+.box_margin_bottom{
+    margin-bottom:20px;
+}
+
+.float_left{
+    float:left;
+    width:75%;
+}
+
+.float_right{
+    float:right;
+}
+
+.handlediv{
+    float: right;
+}
+
+.button-link{
+    border: 0;
+    background: 0 0;
+    cursor: pointer;
+    outline:0;
+}
+
+.glyphicon-menu-down:before{
+    content:"\e114";
+}
+
+.tags_text{
+    color: #666;
+    font-style: italic;
+}
+
+.right{
+    text-align:right;
+}
+
+#tags div{
+    display:block;
+    border-radius:0px;
+}
+
+.featured_image{
+    width:25%;
+}
+
+.select_box{
+    margin:5px;
+    padding:0px 6px;
+}
+.select_status{
+    float: right;
+    height: 27px;
+    margin-right: 13px;
+    width: 144px;
+}
+.float_none{
+    float:none;
+}
+.search_margin{
+    margin-top:10px;
+    padding:10px;
+}
+.search{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 5px;
+    background-repeat: no-repeat;
+    padding: 5px 10px 5px 37px;
+ 
+    color:#000;
+}
+.search:focus {
+    width: 100%;
+}
+.search-form select{
+    border: 1px solid #ccc;
+    height: 34px;
+    margin: 0;
+}
+.search-form{
+    padding: 15px;
+    background-color: #f4f4f4;
+}
+.search-form h3{
+    margin-top: 0px;
+}
+
+.logos{
+	width:100px;
+	height: 75px;
+}
+
+.cursor_auto{
+	cursor:auto !important;
+}
+
+.module-types ul{
+	list-style:none;
+}
+
+.module-types li{
+	padding:4px;
+	padding-left:10px;
+}
+
+.module-types li a{
+	font-weight:bold;
+	margin-right:6px;
+}
+
+.module-types li:nth-child(odd){
+	background-color: #ECECEC;
+}
+
+.applied_template{
+	font-weight:bold;
+}
+
+body{
+	padding:0px;
+}
+
+body li, body li a, body li a span, body span, body span small{ 
+	font-size:14px;
+	font-family:'Source Sans Pro', sans-serif, Lucida Sans Unicode;
+}
+
+*{ 
+	font-size:14px;
+	font-family:'Source Sans Pro', sans-serif, Lucida Sans Unicode;
+}
+
+#uploader h1 {
+	font-size:100%;
+}
+
+.page {
+  padding: 15px 0px 0px;
+}
+
+.modalButton {
+  display: block;
+  margin: 15px auto;
+  padding: 5px 15px;
+}
+
+.modal-dialog {
+  
+  .close-button {
+    overflow: hidden;
+    
+    button.close {
+      font-size: 30px;
+      line-height: 30px;
+	  margin:6px;
+      padding: 7px 4px 7px 13px;
+      @include text-shadow(none);
+      @include opacity(.7);
+      color:#fff;
+
+      span {
+        display: block;
+      }
+      
+      &:hover,
+      &:focus {
+        @include opacity(1);
+        outline: none;
+      }
+    }
+  }
+  
+  .modal-content {
+    box-shadow: none;
+    background-color: transparent;
+    border: 0;
+    
+    iframe {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 768px){
+	.modal-dialog {
+		width: 768px;
+		margin: 30px auto;
+	}
+}
+
+#filePath{
+	height:inherit;
+}
+
+#modalCloseButton{
+	margin-left:10px;
+}
+
+iframe{
+	border-radius:4px;
+}
+
+#imagePreviewDiv{
+	padding:10px;
+}
+
+.child{
+	margin-left:10px;
+}
+
+ul {
+	padding-left:18px;
+	list-style:none;
+}
+
+.col-sm-2, .col-md-2{
+	text-align:center;
+}
+
+.left-side{
+    left: 0px;
+    transition-property: left;	
+}
+
+.right-side{
+	transition-property: margin;
+}
+
+.left-side,.right-side{
+	transition-duration:.24s;
+	transition-timing-function: ease-in-out;
+}
+
+.ion{
+	font-size:inherit;
+}
+
+.disabled{
+	cursor:not-allowed;
+}
+
+
+/*css for ajax call loader*/
+/* Start by setting display:none to make this hidden.
+  Then we position it in relation to the viewport window
+  with position:fixed. Width, height, top and left speak
+  for themselves. Background we set to 20% black with
+  our animation centered, and no-repeating */
+.loading-modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 0, 0, 0, .2 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .loading-modal {
+    display: block;
+}
+
+div#tags span.label-primary {
+    font-size: .85em !important;
+    background-color: #5bc0de;
+}
+
+.tag-input{
+	border:1px solid #ccc;
+	padding:4px;
+	width: 100%;
+}
+
+.featured-image-text{
+    margin-left: 10px;
+    font-weight: normal;
+    margin-top:4px;
+}
+
+.not-found-block{
+    font-size: 24px;
+    text-align: center;
+}
