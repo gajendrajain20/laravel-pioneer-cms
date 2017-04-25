@@ -18,21 +18,28 @@ composer
 
 A step by step series of examples that tell you how to get a development env running
 
+Run the command in terminal
+```
+$ composer create-project gajendrajain20/laravel-pioneer-cms
+```
 
 Open your php.ini (from your 'xampp/php/' directory) & remove semicolon i.e. ';' from the line 
 ```
 'extension=php_fileinfo.dll'.
 ```
+
 Create an empty database & update the database name & password in .env file.
 
 Create a Re-captcha key & put it in your .env file under following key 
 ```
 'G-RECAPTCHA-SECRET'
 ```
+
 Run the command in root directory.
 ```
 $ composer update
 ```
+
 Run the command in root directory.
 ```
 $ php artisan migrate --seed
