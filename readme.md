@@ -28,6 +28,14 @@ Open your `php.ini` (from your 'xampp/php/' directory) & remove semicolon i.e. '
 'extension=php_fileinfo.dll'.
 ```
 
+Update your `.env` file
+```
+DB_HOST=127.0.0.1
+DB_DATABASE=homestead
+DB_USERNAME=root
+DB_PASSWORD=secret
+```
+
 Create an empty database & update the database name & password in .env file.
 
 Create a Re-captcha key & put it in your .env file under following key 
