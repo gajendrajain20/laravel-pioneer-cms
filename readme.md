@@ -25,7 +25,7 @@ $ composer create-project gajendrajain20/laravel-pioneer-cms
 
 Open your `php.ini` (from your 'xampp/php/' directory) & remove semicolon i.e. ';' from the line 
 ```
-'extension=php_fileinfo.dll'.
+;extension=php_fileinfo.dll
 ```
 
 Update your `.env` file
