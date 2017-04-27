@@ -23,7 +23,7 @@ Run the command in terminal
 $ composer create-project gajendrajain20/laravel-pioneer-cms
 ```
 
-Open your php.ini (from your 'xampp/php/' directory) & remove semicolon i.e. ';' from the line 
+Open your `php.ini` (from your 'xampp/php/' directory) & remove semicolon i.e. ';' from the line 
 ```
 'extension=php_fileinfo.dll'.
 ```
@@ -43,6 +43,30 @@ $ composer update
 Run the command in root directory.
 ```
 $ php artisan migrate --seed
+```
+
+Create a new virtual host entry for this application in your `httpd-vhosts.conf` file.
+```
+<VirtualHost *:80>
+    ##ServerAdmin webmaster@dummy-host.example.com
+    ServerName www.pioneercms.com
+    ServerAlias pioneercms.com
+    DocumentRoot "D:\xampp\htdocs\projects\laravel-pioneer-cms"
+    <Directory "D:\xampp\htdocs\projects\laravel-pioneer-cms">
+        Options -Indexes +FollowSymLinks +MultiViews
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ##ErrorLog "logs/dummy-host.example.com-error.log"
+    ##CustomLog "logs/dummy-host.example.com-access.log" common
+</VirtualHost>
+```
+
+Note: **set the `DocumentRoot` & `Directory` path to only `laravel-pioneer-cms` folder only... don't set it to the public folder**
+
+Create a new entry in your `hosts` file like this:
+```
+127.0.0.1   pioneer.com
 ```
 
 ### For Adding Comments functionality in website
