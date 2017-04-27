@@ -3,11 +3,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                	@if(!empty($site_settings['site.footer.logo']))
-                    <div class="row">
-                        <img src="{{ asset('images/site/'.$site_settings['site.footer.logo']) }}" class="frontend_logo_images"/>
-                    </div>
-                    @endif
+					<a href="/" class="site-name-anchor">
+						@if(!empty($site_settings['site.footer.logo']))
+							<div class="row">
+								<img src="{{ asset('images/site/'.$site_settings['site.footer.logo']) }}" class="frontend_logo_images"/>
+							</div>
+						@endif
+					</a>
                 </div>
                 <div class="col-sm-8 float_right">
                     <div class="row">

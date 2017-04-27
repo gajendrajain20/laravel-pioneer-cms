@@ -368,7 +368,8 @@ class FrontendController extends BaseController {
 	    			
 	    			//checking if there is a single category or not, & if there is only one then show see all button in view
 	    			if(count($searchQuery['categories']) == 1){
-	    				$widgetData['seeAll'] = $searchQuery['categories']['0'];
+						$categoryIds = array_values($searchQuery['categories']);
+	    				$widgetData['seeAll'] = $categoryIds['0'];
 	    			}
 	    			
 	    			$widgetsData[$widget['widget_id']] =array('module'=>$widget['module'],'widgetData'=>$widgetData,
