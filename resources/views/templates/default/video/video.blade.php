@@ -54,12 +54,7 @@ $currentUrl = Request::url();
 <h4 class="block-title red_title" style="margin-bottom: 20px;">    
     <span>You may also like</span>
 </h4>
-<script>
-    var idcomments_acct = '1dd1de7711892fb820ebf006a457fe66';
-    var idcomments_post_id;
-    var idcomments_post_url;
-</script>
-<span id="IDCommentsPostTitle" style="display:none"></span>
-<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+
+@include('intense-debate-script')
 
 @stop
