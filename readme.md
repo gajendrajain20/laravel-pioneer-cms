@@ -101,6 +101,7 @@ Signup on [IntenseDebate](https://intensedebate.com/) & add a new blog/site from
 
 * [**Gajendra Jain**](https://github.com/gajendrajain20)
 * [**Manish Yadav**](https://github.com/manishyadav-daffodil)
+* [**Rudraksh Pathak**](https://github.com/rudraksh-daffodil)
 
 
 ## License
