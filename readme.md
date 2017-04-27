@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software
+What things you need to install the application
 
 ```
 composer
@@ -16,7 +16,7 @@ composer
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of examples that tell you how to get a development environment running
 
 Run the command in terminal
 ```
@@ -25,7 +25,15 @@ $ composer create-project gajendrajain20/laravel-pioneer-cms
 
 Open your `php.ini` (from your 'xampp/php/' directory) & remove semicolon i.e. ';' from the line 
 ```
-'extension=php_fileinfo.dll'.
+;extension=php_fileinfo.dll
+```
+
+Update your `.env` file
+```
+DB_HOST=127.0.0.1
+DB_DATABASE=homestead
+DB_USERNAME=root
+DB_PASSWORD=secret
 ```
 
 Create an empty database & update the database name & password in .env file.
@@ -101,6 +109,7 @@ Signup on [IntenseDebate](https://intensedebate.com/) & add a new blog/site from
 
 * [**Gajendra Jain**](https://github.com/gajendrajain20)
 * [**Manish Yadav**](https://github.com/manishyadav-daffodil)
+* [**Rudraksh Pathak**](https://github.com/rudraksh-daffodil)
 
 
 ## License
