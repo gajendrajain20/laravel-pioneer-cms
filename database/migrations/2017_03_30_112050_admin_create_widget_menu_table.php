@@ -17,7 +17,6 @@ class AdminCreateWidgetMenuTable extends Migration
             $table->integer('widget_id')->unsigned()->index();
             $table->foreign('widget_id')->references('id')->on('widgets')->onDelete('cascade');
             $table->integer('menu_id')->unsigned()->index();
-            $table->foreign('menu_id')->references('id')->on('menus')->onDelete('cascade');
         });
     }
 

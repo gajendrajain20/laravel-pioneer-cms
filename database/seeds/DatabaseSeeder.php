@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TemplatesTableSeeder::class);
         $this->call(MenuTableSeeder::class);
         $this->call(MenuTypeSeeder::class);
+		$this->call(WidgetPositionSeeder::class);
         Model::reguard();
     }
 }

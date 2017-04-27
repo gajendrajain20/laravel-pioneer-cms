@@ -149,7 +149,7 @@ class EloquentAdminArticleRepository extends EloquentArticleRepository {
         }
         
         if (isset($searchQuery['count'])) {
-        	return $query->take($searchQuery['count'])->get(['articles.id', 'title', 'body', 'image', 'published_on','views']);
+        	return $query->take($searchQuery['count'])->get(['articles.id', 'slug', 'title', 'body', 'image', 'published_on','views']);
         }else{
         	return $query->get(['articles.id', 'slug', 'title', 'body', 'image', 'published_on','views']);
         }
