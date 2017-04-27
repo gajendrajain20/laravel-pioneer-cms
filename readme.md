@@ -44,6 +44,12 @@ Run the command in root directory.
 ```
 $ php artisan migrate --seed
 ```
+
+### For Adding Comments functionality in website
+Signup on [IntenseDebate](https://intensedebate.com/) & add a new blog/site from sites dropdown in header. Provide your site url in the given box & click on next step, then click on generic install. Then copy the code provded in sidebar & paste it in the following file:
+```
+..\resources\views\templates\default\intense-debate-script.blade.php
+```
  
 ### First Usage Instructions 
 1) After installing open login using the given creadentials:
@@ -69,8 +75,8 @@ $ php artisan migrate --seed
 
 ## Authors
 
-* **Gajendra Jain**
-* **Manish Yadav**
+* [**Gajendra Jain**](https://github.com/gajendrajain20)
+* [**Manish Yadav**](https://github.com/manishyadav-daffodil)
 
 
 ## License

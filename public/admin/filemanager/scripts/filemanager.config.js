@@ -18,7 +18,6 @@
         "dateFormat": "d M Y H:i",
         "serverRoot": true,
         "fileRoot": "/public/images/",
-        "relPath": false,
         "logger": false,
         "capabilities": ["select", "download", "rename", "delete", "replace", "selectImage"],
         "plugins": []
