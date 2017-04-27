@@ -36,31 +36,30 @@ Laravel CMS Features (Admin Panel) :-
 ===================================================
 
     1)  CRUD operations for Posts, Pages, Categories, video, Widgets, Users, Roles & Permissions.
-    2)  Post can be saved as draft for later action.
-    3)  Post can be put under different Categories.
-    4)  Post can be set to publish after a specific date.
-    5)  A Featured image can be added to post along with the content.
-    6)  CKEditor to design the content of post.
-    7)  Tags, Meta Title & Meta Description can also be added to aid in SEO.
-    8)  Search Posts on the basis of their  Category, User & Status.
-    9)  Create dynamic Menus for Frontend & assign them to a Position.
-    10) Create 6 type of menus (Post, Page, Video, Category, Module, Custom).
-    11) Create Hierarichal menus.
-    12) Create perdefined widgets or write your own.
-    13) Create your own widgets template and assign it to your widgets.
-	14) You can assign your widgets to different positions.
-    15) You can assign widgets to mobile view or desktop view or both.
-    16) You can assign how many days a widget will be shown on the frontend.
-    17) Add & Manage Modules directly from Admin Panel & Assign them to menu for Frontend use for that user need to create different modules.
+    2)  Save posts as draft for later action.
+    3)  Put posts under different Categories.
+    4)  Publish post on a specific date.
+    5)  Add featured image to post along with the content.
+    6)  Use CKEditor to design the content of post.
+    7)  Add Tags, Meta Title & Meta Description to aid in SEO.
+    8)  Search Posts on the basis of Category, User & Status.
+    9)  Create dynamic frontend menus & assign them to a position.
+    10) Create 6 type of hierarichal menus (Post, Page, Video, Category, Module, Custom).
+    11) Use perdefined widgets or create your own.
+    12) Use predefined widget templates or create your own and assign it to widgets.
+	13) Assign widgets to different positions.
+    14) Assign widgets to only mobile or desktop view or both.
+    15) Assign for how many days a widget will be shown on the frontend.
+    16) Assign widget(s) to singlel or multiple frontend menus.
+    17) Create/Add, Manage Modules & assign them to frontend menus.
     18) Manage your media from Media Manager.
-    19) Create new Users for Backend & restrict them to specific actions using different Roles.
-    20) Define your own Roles & Permissions.
-    21) Upload Template for FrontEnd & Activate/Deactivate it from Admin Panel.
-    22) Upload Site Logo, Footer logo, Site Favicon from Settings.
-    23) Add Social Media links from Backend which will be shown on the FrontEnd.
-    24) Add Google Analytics from Backend.
-	25) We can restrict the admin menus for particular users according to the role.
-	26) You can assign widgets to a multiple menus or a single menus or all menus.
+    19) Define new roles & permissions.
+    10) Add users & restrict their actions using different roles.
+    21) Restrict menu visiblity for users according to their role.
+    22) Upload & Activate/Deactivate frontend template(s).
+    23) Add Site Logo, Footer logo, Site Favicon in Settings.
+    24) Add Social Media links for frontend.
+    25) Add Google Analytics for frontend.
 	
 ---------------------------------------------------
 	
@@ -68,12 +67,12 @@ Laravel CMS Features (Admin Panel) :-
 Laravel CMS Features (Front End) :-
 ===================================================
 
-    1)  Hierarichal Menu/ Navigaton Bar created from Backend.
-    2)  Sidebar for Eye Catchy Content.
+    1)  Hierarichal Menu/ Navigaton Bar created from admin panel.
+    2)  Sidebar for eye catchy content.
     3)  Add & Reply to Comments on diffrent content.
-    4)  Upload News for the Admin.
-    5)  Ask Queries from the Admin.
-    6)  Share content on diffrent social media sites( Facebook, Twitter, Pinterest, Google Plus).
+    4)  Upload news to the site.
+    5)  Ask queries from the admin.
+    6)  Share content on diffrent social media sites( Facebook, Twitter, Pinterest, Google+).
     7)  Customizable Footer from Backend.
 	
 ---------------------------------------------------

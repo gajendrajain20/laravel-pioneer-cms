@@ -51,6 +51,16 @@ $ php artisan migrate --seed
 	*	email  				: admin@mailinator.com
 	*	password			: admin
 
+## Screenshots
+
+### Posts
+![Alt text](https://github.com/gajendrajain20/laravel-pioneer-cms/blob/screenshots/images/Posts.jpg?raw=true "Posts Index Page")
+
+### Settings
+![Alt text](https://github.com/gajendrajain20/laravel-pioneer-cms/blob/screenshots/images/Settings.jpg?raw=true "Settings Page")
+
+### Front-end
+![Alt text](https://github.com/gajendrajain20/laravel-pioneer-cms/blob/screenshots/images/Site%20Public.jpg?raw=true "Site Front-end with default template")
 
 ## Built With
 
@@ -60,6 +70,7 @@ $ php artisan migrate --seed
 ## Authors
 
 * **Gajendra Jain**
+* **Manish Yadav**
 
 
 ## License
