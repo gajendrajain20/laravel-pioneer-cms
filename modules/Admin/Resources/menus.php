@@ -47,6 +47,11 @@
 			$sub->route('admin.widgets.choose', trans('admin.menus.widget.create'), [], 2);
 		}, 5, ['icon' => 'fa fa-briefcase']);
 	});
+    Menu::create('templates-menu', function ($menu) {
+        $menu->setPresenter('Pingpong\Admin\Presenters\SidebarMenuPresenter');
+        $menu->route('admin.templates.index', trans('admin.menus.templates'), [], 0, ['icon' => 'fa fa-files-o']);
+    });
+	   
 	Menu::create('contacts-menu', function ($menu) {
 		$menu->setPresenter('Pingpong\Admin\Presenters\SidebarMenuPresenter');
 		$menu->route('admin.contacts.index', trans('admin.menus.contacts.title'), [],  6, ['icon' => 'fa fa-question-circle']);
