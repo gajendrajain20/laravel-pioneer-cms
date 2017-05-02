@@ -1,5 +1,7 @@
 # Laravel Pioneer CMS
 
+[![PHPPackages Rank](http://phppackages.org/p/gajendrajain20/laravel-pioneer-cms/badge/rank.svg)](http://phppackages.org/p/gajendrajain20/laravel-pioneer-cms)
+
 Pioneer CMS for Laravel : To provide a platform for commencing your journey in CMS for Laravel.
 
 ## Getting Started
