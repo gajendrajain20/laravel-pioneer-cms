@@ -74,8 +74,17 @@ class BaseController extends Controller {
      */
     public function view($view, $data = array(), $mergeData = array())
     {
-    	return View::make('admin::'.$view, $data, $mergeData);
+    	return View::make($this->theme.'::'.$view, $data, $mergeData);
     }
     
+    /**
+     * Get all input data.
+     *
+     * @return array
+     */
+    public function inputAll()
+    {
+        return Input::all();
+    }
 
 }
