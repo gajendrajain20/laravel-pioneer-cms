@@ -14,7 +14,16 @@ class RoleAndUserSeeder extends Seeder
         $role = Pingpong\Trusty\Role::create([
             'name' => 'Administrator',
             'slug' => 'admin',  // MUST USE admin, DO NOT CHANGE!
-            'description' => '',
+            'description' => 'a role with every permission',
+            'created_at' => new \Carbon\Carbon(),
+            'updated_at' => new \Carbon\Carbon(),
+        ]);
+		
+		//Creating the frontend user role
+		$frontendRole = Pingpong\Trusty\Role::create([
+            'name' => 'Frontend User',
+            'slug' => 'frontend_user',  // MUST USE frontend_user, DO NOT CHANGE!
+            'description' => 'Normal frontend user role',
             'created_at' => new \Carbon\Carbon(),
             'updated_at' => new \Carbon\Carbon(),
         ]);

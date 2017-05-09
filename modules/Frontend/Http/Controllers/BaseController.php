@@ -41,6 +41,9 @@ class BaseController extends Controller {
         
 	        \View::addLocation('../resources/views/templates/'.option('site.template'));
 	        \View::addNamespace(option('site.template'), '../resources/views/templates/'.option('site.template'));
+        }else{
+            \View::addLocation('../resources/views/templates/default');
+            \View::addNamespace('default', '../resources/views/templates/default');
         }
         
         $this->theme = (option('site.template')!='')?option('site.template'):"default";

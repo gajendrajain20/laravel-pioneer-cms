@@ -39,13 +39,14 @@ type="text/css"/>
                         <input type="checkbox" id="remember-me-checkbox" name="remember" value="1" />
                         Remember me</label>
                     </div>
+                    <a href="{{ route('frontend.register.index') }}" class="text-center">Need an account? Register here</a>
                 </div>
                 <div class="footer">
                     <button type="submit" class="btn bg-olive btn-block">Sign me in</button>
                     <!--
                     <p><a href="#">I forgot my password</a></p>
-
-                    <a href="register.html" class="text-center">Register a new membership</a> -->
+ -->
+                    
                 </div>
             {!! Form::close() !!}
 

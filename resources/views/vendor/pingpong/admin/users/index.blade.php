@@ -29,7 +29,7 @@
 				<td>{!! $user->name !!}</td>
 				<td>{!! $user->email !!}</td>
 				<td>{!! $user->created_at !!}</td>
-				@if($user->is('admin') || $user->name = Auth::user()->name)
+				@if($user->is('admin') || $user['original']['name'] == Auth::user()->name)
     				<td class="text-center">
     					<a class="btn  btn-default" href="{!! route('admin.users.edit', $user->id) !!}">Edit</a>
     					&middot;

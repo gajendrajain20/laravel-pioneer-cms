@@ -37,4 +37,18 @@ class LoginController extends BaseController
 
         return \Redirect::back()->withFlashMessage('Login failed!')->withFlashType('danger');
     }
+    
+    /**
+     * Logout.
+     *
+     * @return \Response
+     */
+    public function logout()
+    {
+        \Auth::logout();
+    
+        unset($_SESSION['admin']);
+    
+        return $this->redirect('login.index');
+    }
 }

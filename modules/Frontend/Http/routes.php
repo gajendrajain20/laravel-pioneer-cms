@@ -10,11 +10,19 @@ Route::group(['middleware'=>'App\Http\Middleware\TestAdminMiddleware','namespace
                     'store' => 'frontend.login.store',
                 ],
             ]);
+            
+            Route::resource('register', 'RegisterController', [
+                'only' => ['index', 'store'],
+                'names' => [
+                    'index' => 'frontend.register.index',
+                    'store' => 'frontend.register.store',
+                ],
+            ]);
         });
         
         Route::group(['middleware' => config('frontend.filter.auth')], function () {
             Route::get('/', ['as' => 'frontend.home', 'uses' => 'FrontendController@index']);
-            Route::get('/logout', ['as' => 'frontend.logout', 'uses' => 'FrontendController@logout']);
+            Route::get('/logout', ['as' => 'frontend.logout', 'uses' => 'LoginController@logout']);
         });
 	    
         Route::get('/article/{id}', ['as'=>'frontend.article.index', 'uses' => 'ArticleController@index']);
