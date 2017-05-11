@@ -24,7 +24,8 @@ class PermissionsTableSeeder extends Seeder
             'Manage Menus',
             'Manage Positions',
             'Manage Media',
-            'Manage Modules'
+            'Manage Modules',
+            'Manage Templates'
         );
 
         foreach ($permissions as $permission) {

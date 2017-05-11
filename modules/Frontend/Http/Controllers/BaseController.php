@@ -41,6 +41,9 @@ class BaseController extends Controller {
         
 	        \View::addLocation('../resources/views/templates/'.option('site.template'));
 	        \View::addNamespace(option('site.template'), '../resources/views/templates/'.option('site.template'));
+        }else{
+            \View::addLocation('../resources/views/templates/default');
+            \View::addNamespace('default', '../resources/views/templates/default');
         }
         
         $this->theme = (option('site.template')!='')?option('site.template'):"default";
@@ -74,8 +77,17 @@ class BaseController extends Controller {
      */
     public function view($view, $data = array(), $mergeData = array())
     {
-    	return View::make('admin::'.$view, $data, $mergeData);
+    	return View::make($this->theme.'::'.$view, $data, $mergeData);
     }
     
+    /**
+     * Get all input data.
+     *
+     * @return array
+     */
+    public function inputAll()
+    {
+        return Input::all();
+    }
 
 }

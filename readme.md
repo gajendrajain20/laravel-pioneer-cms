@@ -1,5 +1,7 @@
 # Laravel Pioneer CMS
 
+[![PHPPackages Rank](http://phppackages.org/p/gajendrajain20/laravel-pioneer-cms/badge/rank.svg)](http://phppackages.org/p/gajendrajain20/laravel-pioneer-cms)
+
 Pioneer CMS for Laravel : To provide a platform for commencing your journey in CMS for Laravel.
 
 ## Getting Started
@@ -18,14 +20,19 @@ composer
 
 A step by step series of examples that tell you how to get a development environment running
 
-Run the command in terminal
-```
-$ composer create-project gajendrajain20/laravel-pioneer-cms
-```
-
 Open your `php.ini` (from your 'xampp/php/' directory) & remove semicolon i.e. ';' from the line 
 ```
 ;extension=php_fileinfo.dll
+```
+
+Self update the composer
+```
+$ composer self-update
+```
+
+Run the command in terminal
+```
+$ composer create-project gajendrajain20/laravel-pioneer-cms
 ```
 
 Update your `.env` file
@@ -36,11 +43,17 @@ DB_USERNAME=root
 DB_PASSWORD=secret
 ```
 
-Create an empty database & update the database name & password in .env file.
+Create an empty database & update the database name & password in `.env` file.
 
-Create a Re-captcha key & put it in your .env file under following key 
+Create a Re-captcha key & put it in your `.env` file under following key 
 ```
 'G-RECAPTCHA-SECRET'
+```
+
+
+Dump the autoload file using composer
+```
+$ composer dumpauto
 ```
 
 Run the command in root directory.

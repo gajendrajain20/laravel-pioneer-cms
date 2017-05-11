@@ -26,9 +26,15 @@ a:hover{
 a{
 	text-decoration:none !important;
 }
+
+a:focus{
+	color: #ff0080;
+}	
+
 .container{
     max-width:1080px;
 }
+
 .topHeader{
     background-color: #2f2f2f;
     padding-bottom: 5px;
@@ -839,4 +845,16 @@ body.loading .modal_loader {
 
 .site-name-anchor{
 	text-decoration: none !important;
+}
+
+.header-user-name{
+	font-size: 14px;
+}
+
+.header-logout{
+	color:#ff8080;
+	font-size:14px;
+	border-left:1px solid #fff;
+	padding-left:6px;
+	margin-left:4px;
 }

@@ -47,37 +47,37 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     { 
-    	// if ($e instanceof ModelNotFoundException) {
-    		// $e = new NotFoundHttpException($e->getMessage(), $e);
-    	// }
+//     	if ($e instanceof ModelNotFoundException) {
+//     		$e = new NotFoundHttpException($e->getMessage(), $e);
+//     	}
     	
-    	// if ($e instanceof ForbiddenException) {
-    		// return response()->view('admin::403', [], 403);
-    	// }
+//     	if ($e instanceof ForbiddenException) {
+//     		return response()->view('admin::403', [], 403);
+//     	}
     	
-    	// if ($e instanceof NotFoundHttpException) {
-    		// return response()->view('admin::404', [], 404);
-    	// }
+//     	if ($e instanceof NotFoundHttpException) {
+//     		return response()->view('admin::404', [], 404);
+//     	}
     	
-    	// if ($e instanceof MethodNotAllowedHttpException) {
-    		// return response()->view('admin::404', [], 404);
-    	// }
+//     	if ($e instanceof MethodNotAllowedHttpException) {
+//     		return response()->view('admin::404', [], 404);
+//     	}
     	
-    	// if ($e instanceof TokenMismatchException) {
-    		// return \Redirect::to('admin/login')->withFlashMessage('Please login first!')->withFlashType('danger');
-    	// }
+//     	if ($e instanceof TokenMismatchException) {
+//     		return \Redirect::to('admin/login')->withFlashMessage('Please login first!')->withFlashType('danger');
+//     	}
     	
-    	// if ($e instanceof FatalErrorException){
-    	   	// return \Redirect::to('admin/login')->withFlashMessage('Some error occured, Please login first!')->withFlashType('danger');
-    	// }
+//     	if ($e instanceof FatalErrorException){
+//     	   	return \Redirect::to('admin/login')->withFlashMessage('Some error occured, Please login first!')->withFlashType('danger');
+//     	}
     	
-     	// if ($e instanceof \ErrorException){
-        	// return response()->view('admin::500', [], 500);
-      	// }
+//      	if ($e instanceof \ErrorException){
+//         	return response()->view('admin::500', [], 500);
+//       	}
       	
-      	// if($e instanceof InvalidArgumentException){
-      		// return response()->view('admin::500', [], 500);
-      	// }
+//       	if($e instanceof InvalidArgumentException){
+//       		return response()->view('admin::500', [], 500);
+//       	}
     	
         return parent::render($request, $e);
     }

@@ -2,7 +2,29 @@
 
 Route::group(['middleware'=>'App\Http\Middleware\TestAdminMiddleware','namespace' => 'Modules\Frontend\Http\Controllers'], function()
 {
-	Route::get('/', 'FrontendController@index');
+        Route::group(['middleware' => 'frontend_guest'], function () {
+            Route::resource('login', 'LoginController', [
+                'only' => ['index', 'store'],
+                'names' => [
+                    'index' => 'frontend.login.index',
+                    'store' => 'frontend.login.store',
+                ],
+            ]);
+            
+            Route::resource('register', 'RegisterController', [
+                'only' => ['index', 'store'],
+                'names' => [
+                    'index' => 'frontend.register.index',
+                    'store' => 'frontend.register.store',
+                ],
+            ]);
+        });
+        
+        Route::group(['middleware' => config('frontend.filter.auth')], function () {
+            Route::get('/', ['as' => 'frontend.home', 'uses' => 'FrontendController@index']);
+            Route::get('/logout', ['as' => 'frontend.logout', 'uses' => 'LoginController@logout']);
+        });
+	    
         Route::get('/article/{id}', ['as'=>'frontend.article.index', 'uses' => 'ArticleController@index']);
         Route::get('/page/{id}', ['uses' => 'PageController@index']);
         Route::get('/category/{id}', ['uses' => 'CategoryController@index']);

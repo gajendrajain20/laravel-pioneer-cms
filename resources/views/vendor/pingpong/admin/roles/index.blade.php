@@ -33,7 +33,7 @@
 					@endforeach
 				</td>
 				<td>{!! $role->created_at !!}</td>
-				@if ($role->slug == "admin")
+				@if ($role->slug == "admin" || $role->slug == "frontend_user")
 					<td class="text-center">
     					<a class="btn  btn-default disabled" disabled">Edit</a>
     					&middot;

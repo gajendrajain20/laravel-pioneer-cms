@@ -34,6 +34,9 @@
     		@if (Auth::user()->can('manage_widgets'))
     			{!! Menu::get('widgets-menu') !!}
     		@endif
+			@if (Auth::user()->can('manage_templates'))
+    			{!! Menu::get('templates-menu') !!}
+    		@endif
     		@if (Auth::user()->can('manage_contacts'))
     			{!! Menu::get('contacts-menu') !!}
     		@endif
