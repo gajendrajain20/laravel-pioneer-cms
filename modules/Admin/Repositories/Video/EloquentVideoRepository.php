@@ -74,7 +74,7 @@ class EloquentVideoRepository implements VideoRepository {
     }
     public function getAllVideoNames()
     {
-    	return $this->getModel()->get(['id','title'])->toArray();
+    	return $this->getModel()->get(['slug as id','title'])->toArray();
     }
     public function getAllVideoNamesModel()
     {

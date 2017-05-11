@@ -23,7 +23,7 @@ class EloquentAdminArticleRepository extends EloquentArticleRepository {
     }
     
     public function getAllArticleNames() {
-        return $this->getArticle()->get(['id', 'title'])->toArray();
+        return $this->getArticle()->get(['slug as id', 'title'])->toArray();
     }
 
     public function getAllArticleNamesModel() {
@@ -31,7 +31,7 @@ class EloquentAdminArticleRepository extends EloquentArticleRepository {
     }
 
     public function getAllPageNames() {
-        return $this->getModel()->where("type", "=", "page")->get(['id', 'title'])->toArray();
+        return $this->getModel()->where("type", "=", "page")->get(['slug as id', 'title'])->toArray();
     }
 
     public function getAllPageNamesModel() {
