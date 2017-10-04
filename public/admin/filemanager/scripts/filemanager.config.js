@@ -20,7 +20,8 @@
         "fileRoot": "/public/images/",
         "logger": false,
         "capabilities": ["select", "download", "rename", "delete", "replace", "selectImage"],
-        "plugins": []
+        "plugins": [],
+        "relPath":false
     },
     "security": {
         "allowChangeExtensions": false,
