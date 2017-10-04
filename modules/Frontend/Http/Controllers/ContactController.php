@@ -7,12 +7,12 @@ use GuzzleHttp\Client;
 use Input;
 
 class ContactController extends BaseController {
-	
+
 	public function __construct()
-	{	parent::__construct(); 
+	{	parent::__construct();
 		$this->repository = $this->getRepository();
 	}
-	
+
 
     /**
      * Get repository instance.
@@ -23,7 +23,7 @@ class ContactController extends BaseController {
         $repository = 'Modules\Frontend\Repositories\Contact\ContactRepository';
         return app($repository);
     }
-        
+
      /**
      * Get repository instance.
      *
@@ -33,7 +33,7 @@ class ContactController extends BaseController {
         $repository = 'Pingpong\Admin\Repositories\Pages\PageRepository';
         return app($repository);
     }
-    
+
     /**
      * Get repository instance.
      *
@@ -43,18 +43,18 @@ class ContactController extends BaseController {
         $repository = 'Modules\Admin\Repositories\Menu\MenuRepository';
         return app($repository);
     }
-      
+
     /**
      * index action
      *
      * @return mixed
      */
     public function index($id = null) {
-        $menu = $this->getMenuRepository()->findByKey('slug','contact')->toArray();
+        $menu = $this->getMenuRepository()->findByKey('slug','contact-us')->toArray();
         $article = $this->getPageRepository()->findById($menu[0]['post_id']);
         return view($this->theme.'::contact.index',compact('article'));
     }
-    
+
     /**
      * Store a newly created article in storage.
      *
@@ -73,19 +73,19 @@ class ContactController extends BaseController {
     					"secret" =>"6LfIvwcUAAAAAELHKkKyUb0QCuXRhCxNxvkZH3uL",
     					"response" => $g_recaptcha_response
     			]]);
-    	
+
     	$body = $r->getBody();
     	$bodyArray = json_decode($body, true);
-    	
+
     	if($bodyArray['success'])
     	{
     		$contactData = $this->repository->create($data);
     		$message = "Success";
-    		
+
     	}else{
     		$message = "Captcha failed";
     	}
-    	
+
     	return $message;
     }
 
