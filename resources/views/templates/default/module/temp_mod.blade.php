@@ -1,7 +1,7 @@
-@if(!empty($articles)) 
-<h4 class="block-title red_title" style="margin-bottom: 20px;">    
+@if(!empty($articles))
+<!-- <h4 class="block-title red_title" style="margin-bottom: 20px;">
     <span>Temporary Module Design</span>
-</h4>
+</h4> -->
 @foreach ($articles as $article)
 <div class="col-sm-4">
 

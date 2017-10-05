@@ -1,4 +1,4 @@
-@if(!empty($widgets)) 
+@if(!empty($widgets))
 
 	<?php foreach ($widgets as $widget) { ?>
     <div id="ads_hide" class="col-sm-12" style="margin-bottom: 15px;">

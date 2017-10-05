@@ -1,8 +1,8 @@
-@if(!empty($articles)) 
+@if(!empty($articles))
 
-	<h4 class="block-title red_title">    
+	<!-- <h4 class="block-title red_title">
 		<span>VIDEO</span>
-	</h4>
+	</h4> -->
 
 	<?php
 	$i = 0;
