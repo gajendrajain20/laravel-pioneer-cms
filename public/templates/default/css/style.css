@@ -3,7 +3,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 8 Sep, 2016, 12:35:15 AM
     Author     : admin
 */
@@ -29,7 +29,7 @@ a{
 
 a:focus{
 	color: #ff0080;
-}	
+}
 
 .container{
     max-width:1080px;
@@ -48,6 +48,7 @@ a:focus{
     padding-bottom: 5px;
     color: #fff;
     font-size: 11px;
+    min-height: 65px;
 }
 .topHeader .top_date{
     float: left;
@@ -180,7 +181,7 @@ a:focus{
     padding: 15px;
     background-color: #f4f4f4;
     float: left;
-    
+
 }
 .do_not_miss_posts_content{
     float:left;
@@ -337,7 +338,7 @@ header .td-post-comments {
 #navbar a{
     font-family: Exo;
     font-weight: bold;
-    line-height: 78px;    
+    line-height: 78px;
     color: #f4f4f4;
     font-size: 14px;
     padding: 0 15px;
@@ -358,7 +359,7 @@ header .td-post-comments {
     width: 100%;
 }
 #navbar ul ul li a{
-    line-height: 20px;   
+    line-height: 20px;
     color: #000;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -455,8 +456,8 @@ header .td-post-comments {
 }
 
 .frontend_logo_images{
-	height:65px;
-	width:120px;
+	height:64px;
+	width:64px;
 }
 .video_page .td-module-thumb{
     height:220px;
@@ -531,7 +532,7 @@ a.close{
 
 @media (max-width: 768px) {
    /* Class to show mobile widgets */
-  
+
    .mobile{
 	   display: block;
    }
@@ -616,16 +617,16 @@ a.close{
     left:       0;
     height:     100%;
     width:      100%;
-    background: rgba( 255, 255, 255, .8 ) 
-                url('http://i.stack.imgur.com/FhHRx.gif') 
-                50% 50% 
+    background: rgba( 255, 255, 255, .8 )
+                url('http://i.stack.imgur.com/FhHRx.gif')
+                50% 50%
                 no-repeat;
 }
 
 /* When the body has the loading class, we turn
    the scrollbar off with overflow:hidden */
 body.loading {
-    overflow: hidden;   
+    overflow: hidden;
 }
 
 /* Anytime the body has the loading class, our
@@ -693,20 +694,20 @@ body.loading .modal_loader {
     margin-bottom: 10px !important;
 }
 #IDNewThreadSubmitLI .idc-right{
-    float:left !important;     
+    float:left !important;
 }
 #idc-container .idc-btn_l span, #idc-container .idc-btn_s span{
-    background: none !important;   
+    background: none !important;
 }
 #idc-container .idc-right a{
-    background-color: #222222 !important;     
-    border: medium none !important;     
-    border-radius: 0 !important;     
-    color: #fff !important;     
-    font-family: "Roboto",sans-serif !important;     
-    font-size: 13px !important;     
+    background-color: #222222 !important;
+    border: medium none !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+    font-family: "Roboto",sans-serif !important;
+    font-size: 13px !important;
     font-weight: 500;
-    padding: 8px 15px !important;     
+    padding: 8px 15px !important;
     transition: background-color 0.4s ease 0s;
 }
 .idc-r{
@@ -768,7 +769,7 @@ body.loading .modal_loader {
 
 #main-menu>li>a{
 	color:#fff;
-}	
+}
 
 #main-menu a{
 	cursor:pointer;
@@ -827,7 +828,7 @@ body.loading .modal_loader {
 .tag{
 	display:inline-block;
 	margin-right :4px;
-	padding: 1px 10px;	
+	padding: 1px 10px;
 	border-radius:2px;
 }
 

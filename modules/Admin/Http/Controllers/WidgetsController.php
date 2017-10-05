@@ -66,9 +66,9 @@ class WidgetsController extends BaseController {
     public function create() {
         $widgetPositionController = new WidgetPositionController();
         $widgetPositions = $widgetPositionController->getAll();
-    
+
         $menuArray = array();
-       
+
         $menuController = new MenuController();
         $menus = $menuController->getAllMenuNames();
         foreach ($menus as $key => $menu) {
@@ -80,15 +80,15 @@ class WidgetsController extends BaseController {
             $widgetArray[$widgetPosition->id] = $widgetPosition->position;
         }
         $arrays = array('widgetArray' => $widgetArray, 'menuArray' => $menuArray);
-        
+
         //getting the list of categories to show on the form
         $adminCategoryController = new AdminCategoriesController(app('Pingpong\Admin\Repositories\Categories\CategoryRepository'));
         $categories = $adminCategoryController->getAllCategoryNames();
         $categories['0']="Uncategorized";
-         
+
         //To  set the internal array pointer to first element so that it can be selected in UI automatically
         reset($categories);
-        
+
         return $this->view('widgets.create', compact('arrays','categories'));
     }
 
@@ -115,17 +115,17 @@ class WidgetsController extends BaseController {
      * @return Response
      */
     public function store(WidgetCreate $request) {
-    	
-        $data = $request->all();	
-       
+
+        $data = $request->all();
+
         $device = implode(" ", $data['device']);
         $data['device'] = $device;
-        
+
         if(isset($data['description']))
         {
         	$data['description'] = htmlentities($data['description']);
         }
-        
+
         if(!isset($data['module'])){
         	$data['module'] = 'custom';
         }else{
@@ -138,9 +138,9 @@ class WidgetsController extends BaseController {
         	$params['orderBy'] = $data['orderBy'];
         	$params['startDate'] = $data['startDate'];
         	$params['endDate'] = $data['endDate'];
-        	 
+
         	$paramsString = json_encode($params);
-        	
+
         	$data['params'] = $paramsString;
         }
         $data['user_id'] = \Auth::id();
@@ -191,12 +191,12 @@ class WidgetsController extends BaseController {
             $selectedMenus = $widgetMenu->getAllMenus($id);
             $widget['menu'] = $selectedMenus;
             $arrays = array('widgetArray' => $widgetArray, 'menuArray' => $menuArray);
-            
+
             if($widget['module'] != 'custom'){
-            
+
             	$templateFiles = glob("../resources/views/templates/".option('site.template')."/module/*.blade.php");
             	$templates = array();
-            	 
+
             	foreach ($templateFiles as $index => $filename) {
             		$templates[substr(basename($filename), 0, strpos(basename($filename), ".blade.php"))]  = ucfirst(substr(basename($filename), 0, strpos(basename($filename), ".blade.php")));
             	}
@@ -212,20 +212,30 @@ class WidgetsController extends BaseController {
             	}catch (\Exception $e){
             		// let it pass, no need to worry
             	}
-            	
+
             	$adminCategoryController = new AdminCategoriesController(app('Pingpong\Admin\Repositories\Categories\CategoryRepository'));
             	$categories = $adminCategoryController->getAllCategoryNames();
             	if(isset($categories['0'])){
             		$categories['0']="Uncategorized";
             	}
-            	
+
             	$params = json_decode($widget['params'],true);
-            	
+
             	unset($widget['params']);
-            	
+
             	foreach ($params as $key => $value){
-            		$widget->$key = $value;
-            	}    	
+
+                    if($key == "categories"){
+                        $categoryArr = [];
+                        foreach($value as $index => $category){
+
+                            $categoryArr[$index] = (int)$category;
+                        }
+                        $value = $categoryArr;
+                        // dd($value);
+                    }
+                    $widget->$key = $value;
+            	}
             }
 
             return $this->view('widgets.edit', compact('widget'), compact('arrays','module','templates','categories'));
@@ -247,26 +257,26 @@ class WidgetsController extends BaseController {
 
             $widget = $this->repository->findById($id);
             $data = $request->all();
-           
+
             if(!isset($data['show_title'])){
             	$data['show_title'] = 0;
             }
-            
+
             if(!isset($data['show_popup'])){
             	$data['show_popup'] = 0;
             }
-            
+
             if(isset($data['description']))
             {
             	$data['description'] = htmlentities($data['description']);
             }
-            
+
             if(!isset($data['module'])){
             	$data['module'] = 'custom';
             }else{
             	$params = array();
             	$params['count'] = $data['count'];
-            	
+
             	if($data['categories']['0'] == "0"){
             		unset($data['categories']['0']);
             	}
@@ -274,12 +284,12 @@ class WidgetsController extends BaseController {
             	$params['orderBy'] = $data['orderBy'];
             	$params['startDate'] = $data['startDate'];
             	$params['endDate'] = $data['endDate'];
-            
+
             	$paramsString = json_encode($params);
-            	 
+
             	$data['params'] = $paramsString;
             }
-            
+
             if(isset($data['device']))
             {
             	$device = implode(" ", $data['device']);
@@ -290,13 +300,13 @@ class WidgetsController extends BaseController {
             $widget->update($data);
 
             $menu = (isset($data['menu']) ? $data['menu'] : '0');
-            
+
             $menuController = new MenuController();
             $widgetMenuController = new WidgetMenusController();
-            
+
             $widgetMenuController->removeAllMenus($id);
-            
-            
+
+
             foreach ($menu as $index => $menuid) {
             	//getting all child menus if it's a parent menu
             	$childMenus = $widgetMenuController->repository->getAllChildMenus($id);
@@ -328,7 +338,7 @@ class WidgetsController extends BaseController {
             return $this->redirectNotFound();
         }
     }
-    
+
     /**
      * Show all the list of widget types to choose from
      *
@@ -337,7 +347,7 @@ class WidgetsController extends BaseController {
     public function chooseWidgetType(){
     	return $this->view('widgets.choose');
     }
-    
+
     /**
      * Show the form for predefined widget category.
      *
@@ -347,13 +357,13 @@ class WidgetsController extends BaseController {
     	$widgetPositionController = new WidgetPositionController();
     	$widgetPositions = $widgetPositionController->getAll();
     	$menuArray = array();
-    	
+
     	$menuController = new MenuController();
     	$menus = $menuController->getAllMenuNames();
     	foreach ($menus as $key => $menu) {
     		$menuArray[$key] = $menu;
     	}
-    	
+
     	$widgetArray = array('Select Position');
     	foreach ($widgetPositions as $widgetPosition) {
     		$widgetArray[$widgetPosition->id] = $widgetPosition->position;
@@ -362,7 +372,7 @@ class WidgetsController extends BaseController {
     	$module = 'articleCategory';
     	$templateFiles = glob("../resources/views/templates/".option('site.template')."/module/*.blade.php");
 		$templates = array();
-    	
+
     	foreach ($templateFiles as $index => $filename) {
     		$templates[substr(basename($filename), 0, strpos(basename($filename), ".blade.php"))]  = ucfirst(substr(basename($filename), 0, strpos(basename($filename), ".blade.php")));
     	}
@@ -383,7 +393,7 @@ class WidgetsController extends BaseController {
     	$adminCategoryController = new AdminCategoriesController(app('Pingpong\Admin\Repositories\Categories\CategoryRepository'));
     	$categories = $adminCategoryController->getAllCategoryNames();
     	$categories['0']="Uncategorized";
-    	
+
     	//To  set the internal array pointer to first element so that it can be selected in UI automatically
     	reset($categories);
     	return $this->view('widgets.create', compact('arrays','module','templates','categories'));

@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<div class="top_breaking_news_discription">
-			 <?php echo \Modules\Frontend\Http\helpers::truncate_html($article['body'], 60); ?>
+			 <?php echo \Modules\Frontend\Http\helpers::truncate_html($article['body'], 100); ?>
 			<div class="td-read-more">
 				<a href = "{{ url('article', [$article['id']]) }}">Read More</a>
 			</div>
