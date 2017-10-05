@@ -1,8 +1,8 @@
-@if(!empty($articles)) 
-
-	<h4 class="block-title red_title">    
+@if(!empty($articles))
+<!--
+	<h4 class="block-title red_title">
 		<span>Video</span>
-	</h4>
+	</h4> -->
 	<div class="balumgala_posts">
 		<div class="row" style="padding-right: 15px;">
 			@foreach ($articles as $article)

@@ -14,82 +14,82 @@
 		{!! Form::text('title', null, ['class' => 'form-control','autofocus'=>'autofocus']) !!}
 		{!! $errors->first('title', '<div class="text-danger">:message</div>') !!}
 	</div>
-		
+
 	<div class="form-group">
-	{!! Form::label('show_title', 'Show Title:') !!}
-	{!! Form::checkbox('show_title', '1'); !!}
-	{!! $errors->first('show_title', '<div class="text-danger">:message</div>') !!}
+		{!! Form::label('show_title', 'Show Title:') !!}
+		{!! Form::checkbox('show_title', '1'); !!}
+		{!! $errors->first('show_title', '<div class="text-danger">:message</div>') !!}
 	</div>
-    
+
 	<div class="form-group">
 		{!! Form::label('module', 'Template:') !!}
-		{!!Form::select('module', $templates, null, ['class' =>'form-control']) !!} 
+		{!!Form::select('module', $templates, null, ['class' =>'form-control']) !!}
 		{!! $errors->first('module', '<div class="text-danger">:message</div>') !!}
 	</div>
-	
+
 	<div class="form-group">
-	{!! Form::label('count', 'Count:') !!}
-	{!! Form::text('count', null, ['class' => 'form-control','placeholder'=>'0']) !!}
-	{!! $errors->first('count', '<div class="text-danger">:message</div>') !!}
+		{!! Form::label('count', 'Count:') !!}
+		{!! Form::text('count', null, ['class' => 'form-control','placeholder'=>'0']) !!}
+		{!! $errors->first('count', '<div class="text-danger">:message</div>') !!}
 	</div>
-	
+
 	<div class="form-group">
-	{!! Form::label('categories', 'Categories to show:') !!} 
-	{!!Form::select('categories[]', $categories, isset($model->categories)?$model->categories : key($categories) , ['multiple' => 'true','class' =>'form-control']) !!}
-	{!! $errors->first('categories', '<div class="text-danger">:message</div>') !!}
+		{!! Form::label('categories', 'Categories to show:') !!}
+		{!!Form::select('categories[]', $categories, array_filter($model->categories) != null?$model->categories : '0' , ['multiple' => 'true','class' =>'form-control']) !!}
+		{!! $errors->first('categories', '<div class="text-danger">:message</div>') !!}
 	</div>
-	
+
 	<div class="form-group">
-	{!! Form::label('orderBy', 'OrderBy:') !!} 
-	{!!Form::select('orderBy', array('date'=>'Date', 'id'=>'Id', 'name'=>'Name'), null, ['class' =>'form-control']) !!} 
-	{!! $errors->first('orderBy', '<div class="text-danger">:message</div>') !!}
+		{!! Form::label('orderBy', 'OrderBy:') !!}
+		{!!Form::select('orderBy', array('date'=>'Date', 'id'=>'Id', 'name'=>'Name'), null, ['class' =>'form-control']) !!}
+		{!! $errors->first('orderBy', '<div class="text-danger">:message</div>') !!}
 	</div>
-	
+
 	<div class="form-group">
 		{!! Form::label('startDate', 'Start Date:') !!}
 		{!! Form::date('startDate', (isset($model->startDate))?$model->startDate:\Carbon\Carbon::now(),['class' => 'form-control']) !!}
 		{!! $errors->first('startDate', '<div class="text-danger">:message</div>') !!}
 	</div>
-	
+
 	<div class="form-group">
 		{!! Form::label('endDate', 'End Date:') !!}
 		{!! Form::date('endDate', (isset($model->endDate))?$model->endDate:\Carbon\Carbon::now(),['class' => 'form-control']) !!}
 		{!! $errors->first('endDate', '<div class="text-danger">:message</div>') !!}
 	</div>
-	
+
 	<div class="form-group">
 		{!! Form::label('class', 'Class:') !!}
 		{!! Form::text('class', null, ['class' => 'form-control']) !!}
 		{!! $errors->first('class', '<div class="text-danger">:message</div>') !!}
 	</div>
-	
+
 	<div class="form-group">
-	{!! Form::label('position', 'Position:') !!} 
-	{!!Form::select('position', $arrays['widgetArray'], null, ['class' =>'form-control']) !!} 
-	{!! $errors->first('position', '<div class="text-danger">:message</div>') !!}
+		{!! Form::label('position', 'Position:') !!}
+		{!!Form::select('position', $arrays['widgetArray'], null, ['class' =>'form-control']) !!}
+		{!! $errors->first('position', '<div class="text-danger">:message</div>') !!}
 	</div>
 
 	 <div class="form-group">
 	{!! Form::label('device', 'Device:') !!}
 			<br>
-	{!! Form::checkbox('device[]', 'desktop'); !!} &nbsp; Desktop 
+	{!! Form::checkbox('device[]', 'desktop'); !!} &nbsp; Desktop
 			<br>
 			{!! Form::checkbox('device[]', 'mobile'); !!} &nbsp; Mobile
 	{!! $errors->first('device', '<div class="text-danger">:message</div>') !!}
 	</div>
-    
+
 	<div class="form-group">
-		{!! Form::label('days_count', 'No Of Days:') !!} 
-		{!!Form::select('days_count', ['0'=>'No Days Limit','15'=>'15','30'=>'30','45'=>'45','60'=>'60'], '0', ['class' =>'form-control']) !!} 
-		{!! $errors->first('days_count', '<div class="text-danger">:message</div>') !!}               
-	
+		{!! Form::label('days_count', 'No Of Days:') !!}
+		{!!Form::select('days_count', ['0'=>'No Days Limit','15'=>'15','30'=>'30','45'=>'45','60'=>'60'], '0', ['class' =>'form-control']) !!}
+		{!! $errors->first('days_count', '<div class="text-danger">:message</div>') !!}
+
 	</div>
-    
+
 	<div class="form-group">
-		{!! Form::label('menu', 'Menu:') !!} 
-		{!!Form::select('menu[]', $arrays['menuArray'], isset($model['menu'])? $model['menu'] : $arrays['menuArray'], ['multiple' => 'true','class' =>'form-control', 'id' => 'select_menu']) !!} 
-		{!! $errors->first('menu', '<div class="text-danger">:message</div>') !!}               
-	
+		{!! Form::label('menu', 'Menu:') !!}
+		{!!Form::select('menu[]', $arrays['menuArray'], isset($model['menu'])? $model['menu'] : $arrays['menuArray'], ['multiple' => 'true','class' =>'form-control', 'id' => 'select_menu']) !!}
+		{!! $errors->first('menu', '<div class="text-danger">:message</div>') !!}
+
 	</div>
 </div>	<!-- Col-md-9 closed -->
 
